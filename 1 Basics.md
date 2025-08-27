@@ -122,11 +122,6 @@ PI = 3.1416
 
 ---
 
-👉 In Python, variables are just **labels pointing to values in memory**.
-
-Do you want me to also give you a **visual diagram** (memory reference of variables) for better understanding?
----
-
 ## 7. Data Types in Python
 
 ### Basic Data Types:
