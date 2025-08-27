@@ -1,5 +1,3 @@
-Got it 👍. I’ll prepare a **clear and structured Python notes** covering:
-
 * Introduction of Python
 * Advantages and Disadvantages
 * Basics (syntax & features)
@@ -91,27 +89,42 @@ print("Hello", name, "you are", age, "years old.")
 
 ## 6. Variables
 
-* A **variable** is a container for data.
-* No need to declare type explicitly.
+* A **variable** is a name that stores data in memory.
+* In Python, you don’t need to declare the type (dynamic typing).
+
+### Rules:
+
+* Must start with a letter or `_` (underscore).
+* Cannot start with a number.
+* Case-sensitive (`Name` ≠ `name`).
+* Avoid keywords (like `if`, `while`).
+
+### Example:
 
 ```python
-x = 10       # integer
-name = "Ram" # string
-pi = 3.14    # float
+x = 10        # integer
+name = "Ravi" # string
+pi = 3.14     # float
 ```
 
-* **Multiple assignment**:
+### Multiple assignment:
 
 ```python
 a, b, c = 10, 20, 30
+x = y = z = 100   # same value to multiple variables
 ```
 
-* **Constants**: By convention, written in uppercase.
+### Constants (not enforced, but convention):
 
 ```python
 PI = 3.1416
 ```
 
+---
+
+👉 In Python, variables are just **labels pointing to values in memory**.
+
+Do you want me to also give you a **visual diagram** (memory reference of variables) for better understanding?
 ---
 
 ## 7. Data Types in Python
