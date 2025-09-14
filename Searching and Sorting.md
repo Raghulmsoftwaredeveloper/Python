@@ -125,13 +125,30 @@ def merge_sort(arr):
 
 ```python
 def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr)//2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quick_sort(left) + middle + quick_sort(right)
+def partition(arr, low, high):
+    pivot = arr[high]   # last element as pivot
+    i = low - 1         # index of smaller element
+    
+    for j in range(low, high):
+        if arr[j] <= pivot:  # if current element is smaller/equal
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    
+    # place pivot in correct position
+    arr[i+1], arr[high] = arr[high], arr[i+1]
+    return i+1
+
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi-1)   # left side
+        quick_sort(arr, pi+1, high)  # right side
+
+# Example
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr)-1)
+print("Sorted array:", arr)
+
 ```
 
 ---
